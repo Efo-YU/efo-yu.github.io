@@ -12,7 +12,7 @@ const vitePressOptions = {
 };
 
 const vitePressSidebarOptions = {
-  documentRootPath: "/",
+  documentRootPath: "/md",
   collapsed: false,
   capitalizeFirst: true,
 };
