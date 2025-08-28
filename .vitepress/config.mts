@@ -1,38 +1,22 @@
-import { defineConfig } from 'vitepress'
-import { withSidebar } from 'vitepress-sidebar';
+import { defineConfig } from "vitepress";
+import { withSidebar } from "vitepress-sidebar";
 
-// https://vitepress.dev/reference/site-config
-defineConfig({
+const vitePressOptions = {
   srcDir: "md",
-  
   title: "Efo's Sandbox",
   description: "Efo's random thoughts, stories, and little discoveries.",
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
-    ],
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
-})
-
-const vitePressOptions = {
-  // VitePress's options here...
-  title: 'VitePress Sidebar',
-  themeConfig: {
-    // ...
-  }
+    nav: [{ text: "Home", link: "/" }],
+    socialLinks: [{ icon: "github", link: "https://github.com/Efo-YU" }],
+  },
 };
 
 const vitePressSidebarOptions = {
-  // VitePress Sidebar's options here...
-  documentRootPath: '/',
+  documentRootPath: "/",
   collapsed: false,
-  capitalizeFirst: true
+  capitalizeFirst: true,
 };
 
-export default defineConfig(withSidebar(vitePressOptions, vitePressSidebarOptions));
+export default defineConfig(
+  withSidebar(vitePressOptions, vitePressSidebarOptions)
+);
